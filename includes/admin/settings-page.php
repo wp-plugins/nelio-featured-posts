@@ -129,7 +129,8 @@ class NelioFPSettingsPage {
 	public function print_feat_post_section() {
 		$fn = 'feat_posts';
 		neliofp_the_post_searcher( 'neliofp-searcher' ); ?>
-		<a id="neliofp-add" class="button"><?php _e( 'Add' ); ?></a>
+		<a id="neliofp-add-first" class="button button-primary"><?php _e( 'Add First' ); ?></a>
+		<a id="neliofp-add-last" class="button"><?php _e( 'Add Last' ); ?></a>
 
 		<br><br>
 		<h4><?php _e( 'These are your featured posts:', 'neliofp' ); ?></h4>
@@ -146,10 +147,13 @@ class NelioFPSettingsPage {
 		<script type="text/javascript">
 		var xxx;
 		(function($) {
-			function addFeatPost( id ) {
+			function addFeatPost( id, position ) {
 				var node = '<div class="result-content"></div>';
 				node = $(node);
-				$("#neliofp-list-of-feat-posts").append(node);
+				if ( 'first' == position )
+					$("#neliofp-list-of-feat-posts").prepend(node);
+				else
+					$("#neliofp-list-of-feat-posts").append(node);
 				jQuery.ajax( {
 					type:     'POST',
 					async:    true,
@@ -187,11 +191,20 @@ class NelioFPSettingsPage {
 			for ( var i = 0; i < aux.length; ++i )
 				addFeatPost(aux[i]);
 
-			$("#neliofp-add").click( function() {
+			$("#neliofp-add-first").click( function() {
 				var id = jQuery("#neliofp-searcher").attr('value');
 				if ( id > 0 ) {
 					try {
-						addFeatPost(parseInt(id));
+						addFeatPost(parseInt(id), 'first');
+					} catch (e) {}
+				}
+			});
+
+			$("#neliofp-add-last").click( function() {
+				var id = jQuery("#neliofp-searcher").attr('value');
+				if ( id > 0 ) {
+					try {
+						addFeatPost(parseInt(id), 'last');
 					} catch (e) {}
 				}
 			});
