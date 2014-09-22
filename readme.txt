@@ -19,7 +19,8 @@ The plugin is extremely simple, fast, and reliable. Once you have selected the
 featured posts, they are saved in a cache, so that the amount of database
 queries is kept to the minimum.
 
-_Featured image by [Abulic Monkey](https://www.flickr.com/photos/abulic_monkey/291689115/)_
+_Featured image by [Abulic
+Monkey](https://www.flickr.com/photos/abulic_monkey/291689115/)_
 
 
 = Features =
