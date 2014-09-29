@@ -19,7 +19,7 @@
 /*
  * Plugin Name: Nelio Featured Posts
  * Description: Select the featured posts you want to show at any time and include them in your theme using a widget.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: Nelio Software
  * Plugin URI: http://neliosoftware.com
  * Text Domain: neliofp
@@ -28,7 +28,7 @@
 // ==========================================================================
 // PLUGIN INFORMATION
 // ==========================================================================
-	define( 'NELIOFP_PLUGIN_VERSION', '1.1.0' );
+	define( 'NELIOFP_PLUGIN_VERSION', '1.1.1' );
 	define( 'NELIOFP_PLUGIN_NAME', 'Nelio Featured Posts' );
 	define( 'NELIOFP_PLUGIN_DIR_NAME', basename( dirname( __FILE__ ) ) );
 

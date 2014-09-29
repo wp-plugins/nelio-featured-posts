@@ -10,8 +10,8 @@ class NelioFPSettingsPage {
 	 * Start up
 	 */
 	public function __construct() {
-		add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
 		add_action( 'admin_init', array( $this, 'page_init' ) );
+		add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
 	}
 
 	/**
@@ -36,7 +36,7 @@ class NelioFPSettingsPage {
 		?>
 		<div class="wrap">
 			<?php screen_icon(); ?>
-			<h2>Nelio Featured Posts</h2>
+			<h2>Featured Posts by Nelio</h2>
 			<br />
 			<form method="post" action="options.php">
 			<?php
@@ -103,26 +103,6 @@ class NelioFPSettingsPage {
 			'neliofp-settings',
 			'advanced_section'
 		);
-
-		/*
-		add_settings_field(
-			'use_excerpt',
-			'Print Body/Excerpt (if available)',
-		// ----------------------------------------------------------------
-			array( $this, 'use_excerpt_callback' ),
-			'neliofp-settings',
-			'advanced_section'
-		);
-
-		add_settings_field(
-			'max_num_of_words_in_excerpt',
-			'Words in Excerpt',
-		// ----------------------------------------------------------------
-			array( $this, 'max_num_of_words_in_excerpt_callback' ),
-			'neliofp-settings',
-			'advanced_section'
-		);
-		*/
 
 	}
 
@@ -232,21 +212,6 @@ class NelioFPSettingsPage {
 		$fn = 'use_feat_image'; ?>
 		<input type="checkbox" id="<?php echo $fn; ?>" name="neliofp_settings[<?php echo $fn; ?>]"
 			<?php checked( NelioFPSettings::use_feat_image_if_available() ); ?> /><?php
-	}
-
-	public function use_excerpt_callback() {
-		$fn = 'use_excerpt'; ?>
-		<input type="checkbox" id="<?php echo $fn; ?>" name="neliofp_settings[<?php echo $fn; ?>]"
-			<?php checked( NelioFPSettings::use_excerpt_if_available() ); ?> /><?php
-	}
-
-	public function max_num_of_words_in_excerpt_callback() {
-		$fn = 'max_num_of_words_in_excerpt';
-		printf(
-			'<input type="text" id="%1$s" name="neliofp_settings[%1$s]" value="%2$s" placeholder="%3$s" />',
-			$fn, NelioFPSettings::get_max_num_of_words_in_excerpt(),
-			NelioFPSettings::DEFAULT_NUM_OF_WORDS_IN_EXCERPT
-		);
 	}
 
 }

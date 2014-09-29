@@ -16,18 +16,6 @@ function neliofp_split_nth( $str, $delim, $n ) {
 	return implode( $delim, $arr );
 }
 
-function neliofp_extract_excerpt( $post, $words = 80 ) {
-	if ( NelioFPSettings::use_excerpt_if_available() && strlen( $post->post_excerpt ) > 0 )
-		return apply_filters( 'the_excerpt', $post->post_excerpt );
-
-	$excerpt = $post->post_content;
-	$excerpt = strip_shortcodes( $excerpt );
-	$excerpt = strip_tags( $excerpt );
-	$excerpt = neliofp_split_nth( $excerpt, ' ', $words ) . '...';
-	return apply_filters( 'the_excerpt', $excerpt );
-}
-
-
 function neliofp_get_the_post_searcher( $field_id, $classes = array() ) {
 	ob_start();
 	neliofp_the_post_searcher( $field_id, $classes );

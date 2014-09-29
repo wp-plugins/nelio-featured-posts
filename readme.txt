@@ -19,8 +19,7 @@ The plugin is extremely simple, fast, and reliable. Once you have selected the
 featured posts, they are saved in a cache, so that the amount of database
 queries is kept to the minimum.
 
-_Featured image by [Abulic
-Monkey](https://www.flickr.com/photos/abulic_monkey/291689115/)_
+_Featured image by_ [_Abulic Monkey_](https://www.flickr.com/photos/abulic_monkey/291689115/)
 
 
 = Features =
@@ -44,6 +43,12 @@ you want.
 
 == Changelog ==
 
+= 1.1.1 =
+* Bug fix: on previous versions of the plugin, saving the list of featured
+posts for the first time did not work (but, after that first attemp, save
+function worked properly). Now, this does no longer occurs and featured posts
+are properly saved always.
+
 = 1.1.0 =
 * When adding a new featured post, you can now add it in the beginning or in
 the end of your list of featured posts.
@@ -56,6 +61,5 @@ the end of your list of featured posts.
 == Upgrade Notice ==
 
 = 1.1.0 =
-When adding a new featured post, you can now add it in the beginning or in the
-end of your list of featured posts.
+Bug fix: saving the list of featured posts works always (first time included).
 
