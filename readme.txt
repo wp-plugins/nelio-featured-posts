@@ -3,7 +3,7 @@ Contributors: nelio
 Tags: featured post, starred post, relevant post, widget, manual featured posts, manual relevant post
 Requires at least: 3.3
 Tested up to: 4.0
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,8 @@ The plugin is extremely simple, fast, and reliable. Once you have selected the
 featured posts, they are saved in a cache, so that the amount of database
 queries is kept to the minimum.
 
-_Featured image by_ [_Abulic Monkey_](https://www.flickr.com/photos/abulic_monkey/291689115/)
+_Featured image by_ [_Abulic
+Monkey_](https://www.flickr.com/photos/abulic_monkey/291689115/)
 
 
 = Features =
@@ -60,6 +61,6 @@ the end of your list of featured posts.
 
 == Upgrade Notice ==
 
-= 1.1.0 =
+= 1.1.1 =
 Bug fix: saving the list of featured posts works always (first time included).
 
