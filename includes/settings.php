@@ -43,7 +43,7 @@ abstract class NelioFPSettings {
 
 		$fn = 'use_feat_image';
 		$new_input[$fn] = false;
-		if( isset( $input[$fn] ) && 'on' === $input[$fn] )
+		if( isset( $input[$fn] ) && ( 'on' === $input[$fn] || true === $input[$fn] ) )
 			$new_input[$fn] = true;
 
 		// Save the IDs
