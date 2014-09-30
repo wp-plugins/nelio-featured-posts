@@ -3,7 +3,7 @@ Contributors: nelio
 Tags: featured post, starred post, relevant post, widget, manual featured posts, manual relevant post
 Requires at least: 3.3
 Tested up to: 4.0
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,10 @@ you want.
 
 == Changelog ==
 
+= 1.1.2 =
+* Tweaking CSS styles just to make sure that featured posts with featured
+images use a proper layout.
+
 = 1.1.1 =
 * Bug fix: on previous versions of the plugin, saving the list of featured
 posts for the first time did not work (but, after that first attemp, save
@@ -61,6 +65,7 @@ the end of your list of featured posts.
 
 == Upgrade Notice ==
 
-= 1.1.1 =
-Bug fix: saving the list of featured posts works always (first time included).
+= 1.1.2 =
+Tweaking CSS styles just to make sure that featured posts with featured images
+use a proper layout.
 

@@ -30,6 +30,11 @@
 }
 
 /* WHEN USING FEATURED IMAGES */
+.widget_neliofp_widget article .featured-image.alignleft {
+	margin: 0px;
+	padding: 0px;
+}
+
 .widget_neliofp_widget article.includes-feat-image {
 	min-height: 70px;
 }
@@ -37,3 +42,4 @@
 .widget_neliofp_widget article.includes-feat-image .entry-title {
 	padding-left: 70px;
 }
+
