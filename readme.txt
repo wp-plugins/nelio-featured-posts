@@ -3,7 +3,7 @@ Contributors: nelio
 Tags: featured post, starred post, relevant post, widget, manual featured posts, manual relevant post
 Requires at least: 3.3
 Tested up to: 4.0
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,11 @@ you want.
 
 == Changelog ==
 
+= 1.1.3 =
+* Improved script inclusion to prevent collisions with other plugins.
+* Referencing our A/B testing service for WordPress.
+
+
 = 1.1.2 =
 * Tweaking CSS styles just to make sure that featured posts with featured
 images use a proper layout.
@@ -65,7 +70,6 @@ the end of your list of featured posts.
 
 == Upgrade Notice ==
 
-= 1.1.2 =
-Tweaking CSS styles just to make sure that featured posts with featured images
-use a proper layout.
+= 1.1.3 =
+Some minor improvements and added a reference to our A/B testing service.
 

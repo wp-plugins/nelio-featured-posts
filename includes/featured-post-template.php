@@ -8,7 +8,7 @@ public static function render( $post ) {
 	$open_link = sprintf(
 		'<a class="featured_post_link" href="%s" title="%s">',
 		get_permalink( $post->ID ),
-		esc_attr( apply_filters( 'the_title', $post->post_title ) )
+		esc_attr( apply_filters( 'the_title', $post->post_title, $post->ID ) )
 	);
 	$close_link = '</a>';
 	$fi = NelioFPSettings::use_feat_image_if_available();
@@ -27,7 +27,7 @@ public static function render( $post ) {
 		} ?>
 		<div class="entry-title"><?php
 			echo $open_link;
-			echo apply_filters( 'the_title', $post->post_title );
+			echo apply_filters( 'the_title', $post->post_title, $post->ID );
 			echo $close_link;
 		?></div>
 	</article>

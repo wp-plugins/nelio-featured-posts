@@ -59,17 +59,19 @@ class NelioFPSettingsPage {
 		add_action( 'wp_ajax_neliofp_search_posts',   'neliofp_search_posts' ) ;
 		add_action( 'wp_ajax_neliofp_get_post_by_id', 'neliofp_get_post_by_id' ) ;
 
-		// Post Searcher
-		wp_enqueue_style( 'neliofp_style_css',
-			neliofp_asset_link( '/admin/style.min.css' ) );
-		wp_enqueue_style( 'neliofp_select2_css',
-			neliofp_asset_link( '/admin/lib/select2-3.5.0/select2.min.css' ) );
-		wp_enqueue_script( 'neliofp_select2',
-			neliofp_asset_link( '/admin/lib/select2-3.5.0/select2.min.js' ) );
-		wp_enqueue_style( 'neliofp_post_searcher_css',
-			neliofp_asset_link( '/admin/post-searcher.min.css' ) );
-		wp_enqueue_script( 'neliofp_post_searcher',
-			neliofp_asset_link( '/admin/post-searcher.min.js' ) );
+		if ( isset( $_GET['page'] ) && 'neliofp-settings' === $_GET['page'] ) {
+			// Post Searcher
+			wp_enqueue_style( 'neliofp_style_css',
+				neliofp_asset_link( '/admin/style.min.css' ) );
+			wp_enqueue_style( 'neliofp_select2_css',
+				neliofp_asset_link( '/admin/lib/select2-3.5.0/select2.min.css' ) );
+			wp_enqueue_script( 'neliofp_select2',
+				neliofp_asset_link( '/admin/lib/select2-3.5.0/select2.min.js' ) );
+			wp_enqueue_style( 'neliofp_post_searcher_css',
+				neliofp_asset_link( '/admin/post-searcher.min.css' ) );
+			wp_enqueue_script( 'neliofp_post_searcher',
+				neliofp_asset_link( '/admin/post-searcher.min.js' ) );
+		}
 
 		register_setting(
 			'neliofp_settings_group',
