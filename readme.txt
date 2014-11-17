@@ -21,7 +21,7 @@ queries is kept to the minimum.
 
 > **Custom Templates**<br>
 > Version 2.0.0 let's you define your own templates for displaying each related
-> post. Just create a directory named `nelioefi` in your theme's directory and
+> post. Just create a directory named `neliofp` in your theme's directory and
 > create the template you want to use such as, for instance,
 > `template-name.php`. When inserting the widget, specify that the template is
 > `template-name` and you're ready to go!
