@@ -31,28 +31,36 @@ class NelioFP_Widget extends WP_Widget {
 		if ( ! empty( $title ) )
 			echo $args['before_title'] . $title . $args['after_title'];
 
+		$template = NELIOFP_DIR . '/featured-post-template.php';
+		if ( isset( $instance['template'] ) && !empty( $instance['template'] ) ) {
+			$aux = get_stylesheet_directory() . '/neliofp/' . $instance['template'] . '.php';
+			if ( file_exists( $aux ) )
+				$template = $aux;
+		}
+
 		// This is where you run the code and display the output
 		$fps = NelioFPSettings::get_list_of_feat_posts();
+		global $post;
+		$ori_post = $post;
 		if ( count( $fps ) > 0 ) {
-			require_once( NELIOFP_DIR . '/featured-post-template.php' );
 			echo '<nav>';
-			foreach ( $fps as $fp ) {
-				echo NelioFPFeaturedPostTemplate::render( $fp );
-			}
+			foreach ( $fps as $post )
+				include( $template );
 			echo '</nav>';
 		}
 		else {
 			echo '<p class="neliofp-none">' . __( 'No featured posts.' ) . '</p>';
 		}
+		$post = $ori_post;
 		echo $args['after_widget'];
 	}
 
 	// Widget Backend
 	public function form( $instance ) {
-		if ( isset( $instance['title'] ) )
-			$title = $instance['title'];
-		else
-			$title = __( 'Featured Posts', 'neliofp' );
+		if ( isset( $instance['title'] ) ) $title = $instance['title'];
+		else $title = __( 'Featured Posts', 'neliofp' );
+		if ( isset( $instance['template'] ) ) $template = $instance['template'];
+		else $template = '';
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
@@ -62,6 +70,14 @@ class NelioFP_Widget extends WP_Widget {
 				name="<?php echo $this->get_field_name( 'title' ); ?>"
 				value="<?php echo esc_attr( $title ); ?>" />
 		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'template' ); ?>"><?php _e( 'Template (without the «.php» extension):', 'neliofp' ); ?></label>
+			<input
+				class="widefat" type="text" placeholder="Default"
+				id="<?php echo $this->get_field_id( 'template' ); ?>"
+				name="<?php echo $this->get_field_name( 'template' ); ?>"
+				value="<?php echo esc_attr( $template ); ?>" />
+		</p>
 		<?php
 	}
 
@@ -69,6 +85,7 @@ class NelioFP_Widget extends WP_Widget {
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
 		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		$instance['template'] = ( ! empty( $new_instance['template'] ) ) ? strip_tags( $new_instance['template'] ) : '';
 		return $instance;
 	}
 }
@@ -78,3 +95,4 @@ add_action( 'widgets_init', 'neliofp_load_widget' );
 function neliofp_load_widget() {
 	register_widget( 'NelioFP_Widget' );
 }
+

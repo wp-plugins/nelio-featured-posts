@@ -3,7 +3,7 @@ Contributors: nelio
 Tags: featured post, starred post, relevant post, widget, manual featured posts, manual relevant post
 Requires at least: 3.3
 Tested up to: 4.0
-Stable tag: 1.1.3
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,6 +18,15 @@ These featured posts can be added to your theme wherever you want via a widget.
 The plugin is extremely simple, fast, and reliable. Once you have selected the
 featured posts, they are saved in a cache, so that the amount of database
 queries is kept to the minimum.
+
+> **Custom Templates**<br>
+> Version 2.0.0 let's you define your own templates for displaying each related
+> post. Just create a directory named `nelioefi` in your theme's directory and
+> create the template you want to use such as, for instance,
+> `template-name.php`. When inserting the widget, specify that the template is
+> `template-name` and you're ready to go!
+>
+> (In the directory `template-examples` you'll find some examples).
 
 _Featured image by_ [_Abulic
 Monkey_](https://www.flickr.com/photos/abulic_monkey/291689115/)
@@ -43,6 +52,10 @@ you want.
 
 
 == Changelog ==
+
+= 2.0.0 =
+* Use custom templates (on a per-widget basis) for rendering featured posts.
+
 
 = 1.1.3 =
 * Improved script inclusion to prevent collisions with other plugins.
@@ -70,6 +83,6 @@ the end of your list of featured posts.
 
 == Upgrade Notice ==
 
-= 1.1.3 =
-Some minor improvements and added a reference to our A/B testing service.
+= 2.0.0 =
+Use custom templates (on a per-widget basis) for rendering featured posts.
 
