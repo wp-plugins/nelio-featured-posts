@@ -1,6 +1,6 @@
 === Nelio Featured Posts ===
 Contributors: nelio
-Tags: featured post, relevant post, starred post, widget, manual featured posts, manual relevant post
+Tags: featured post, starred post, relevant post, widget, manual featured posts, manual relevant post
 Requires at least: 3.3
 Tested up to: 4.0
 Stable tag: 2.0.0
@@ -27,6 +27,26 @@ queries is kept to the minimum.
 > `template-name` and you're ready to go!
 >
 > (In the directory `template-examples` you'll find some examples).
+
+
+= Featured On =
+
+* [13 Awesome Free Featured Post Widgets for
+WordPress](http://designcoral.com/wordpress/free-featured-post-widgets-for-wordpress/)
+(designcoral.com)
+* [How To Set Up a Collection of Featured
+Posts](http://neliosoftware.com/set-collection-featured-posts/) (Nelio's blog)
+
+
+= Related Plugins by [Nelio](http://neliosoftware.com) =
+
+* [Nelio A/B Testing](http://nelioabtesting.com/?fp=wordpress.org) |
+[Download](https://wordpress.org/plugins/nelio-ab-testing/)
+* Nelio External Featured Image |
+[Download](https://wordpress.org/plugins/external-featured-image/)
+* Nelio Related Posts |
+[Download](https://wordpress.org/plugins/nelio-related-posts/)
+
 
 _Featured image by_ [_Abulic
 Monkey_](https://www.flickr.com/photos/abulic_monkey/291689115/)
