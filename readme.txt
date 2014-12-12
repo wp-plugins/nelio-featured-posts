@@ -29,6 +29,16 @@ queries is kept to the minimum.
 > (In the directory `template-examples` you'll find some examples).
 
 
+= Features =
+
+* **Featured Posts Selection** Set the list of featured posts from one single
+place.
+* **Powered by a Widget** Use the featured images wherever you want by simply
+adding a widget.
+* **Customization** You can tweak a few details of the featured post list, such
+as the section title or the number of words in the excerpt.
+
+
 = Featured On =
 
 * [13 Awesome Free Featured Post Widgets for
@@ -50,16 +60,6 @@ Posts](http://neliosoftware.com/set-collection-featured-posts/) (Nelio's blog)
 
 _Featured image by_ [_Abulic
 Monkey_](https://www.flickr.com/photos/abulic_monkey/291689115/)
-
-
-= Features =
-
-* **Featured Posts Selection** Set the list of featured posts from one single
-place.
-* **Powered by a Widget** Use the featured images wherever you want by simply
-adding a widget.
-* **Customization** You can tweak a few details of the featured post list, such
-as the section title or the number of words in the excerpt.
 
 
 == Screenshots ==
