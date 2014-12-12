@@ -1,6 +1,6 @@
 === Nelio Featured Posts ===
 Contributors: nelio
-Tags: featured post, starred post, relevant post, widget, manual featured posts, manual relevant post
+Tags: starred post, featured post, relevant post, widget, manual featured posts, manual relevant post
 Requires at least: 3.3
 Tested up to: 4.0
 Stable tag: 2.0.0
