@@ -1,5 +1,5 @@
 === Nelio Featured Posts ===
-Contributors: nelio
+Contributors: nelio, davilera
 Tags: starred post, featured post, relevant post, widget, manual featured posts, manual relevant post
 Requires at least: 3.3
 Tested up to: 4.1
